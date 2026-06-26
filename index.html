@@ -23,7 +23,7 @@
 <link href="https://alzarraei-gpts.github.io/Arabic-GPT-Hub/" rel="canonical"/>
 <link href="https://alzarraei-gpts.github.io/Arabic-GPT-Hub/banner2.png?v=20260619" rel="image_src"/>
 <meta content="https://alzarraei-gpts.github.io/Arabic-GPT-Hub/banner2.png?v=20260619" itemprop="image"/>
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=2LpUUz0ba0fkouy67RmctoduzjSNVavyuGRyrChpxN-zv9pLMlJXNL-C-5AsQemMDvwLCDWHBfrCkTWBjGU02uhBdtHR6ddX692HQaEeNi7-aIs4FPxXEH1JIjw574UZxi_O-_mWZEhcwB531QOpbLjjGAHGGg5p5nC3dHMAI9YST-90omAQek4Sh2CfYiCX6NaieJaTojczJorNz6ViXlUKd6p5ReMWL1Cr8vQNcNGtSCCxXKFZ3hEuvIwx56YW-uFieU9pr1N4DVhr17akkg" charset="UTF-8"></script><style>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=kjIy-hmduz9w8KlsQzCbkGRxPML4km1CreP75nH2zpWttEDkVFo93fyLWstML51ElSm1G9k7T2ryvu6eNOCLxbF7pvMZIPKrclOOLiCgcgvJBtzuVSL3Aq2VxF7Bf5mhetySyWDEKC_cTjoCVwuM4sHK7sbBwa6QcqpG8XZFmugrKmnXX5dKQwdGa6bhNa3cUsUTwMsip1LBBWqiqk2EZWCuCTp3TI4Rq2QYJx3P1VsEJ4mUcWmIxQKWc2OraI5qJo0eaAQEzXsuozH2kwz2KQ" charset="UTF-8"></script><style>
 :root{
   --bg:#030603;--bg-2:#071107;--panel:#0b120c;--panel-2:#101910;--card:#0e170f;--card-2:#142014;
   --text:#f4fff1;--muted:#a7b3a3;--soft:#d9ead3;--green:#95f21d;--green-2:#64d814;--green-3:#27f589;--cyan:#3ff5dd;--gold:#c98b36;
@@ -824,6 +824,95 @@ body::before,body::after,#particles,.glow-edge::after,.glass::before,
 }
 
 .modal{backdrop-filter:none!important;}
+</style>
+<style id="footer-dropdown-and-package-links">
+/* تنظيم الروابط التعليمية في قائمة منسدلة وإضافة رابط باقة الباحث العلمي بجوارها */
+.footer-link-panel{
+  width:var(--shell);
+  margin:0 auto 18px;
+  border-radius:30px;
+  padding:14px;
+  display:grid;
+  grid-template-columns:minmax(260px,1.45fr) minmax(210px,.8fr);
+  gap:10px;
+  direction:rtl;
+  align-items:start;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(18,27,18,.78),rgba(5,9,5,.88));
+}
+.footer-dropdown,
+.footer-package-link{
+  min-height:48px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.045);
+  border-radius:18px;
+  color:#eaf7e5;
+  font-weight:950;
+  text-align:center;
+}
+.footer-dropdown summary,
+.footer-package-link{
+  min-height:48px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.footer-dropdown summary{
+  list-style:none;
+  cursor:pointer;
+  user-select:none;
+}
+.footer-dropdown summary::-webkit-details-marker{display:none;}
+.footer-dropdown summary::before{
+  content:"⌄";
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  display:inline-grid;
+  place-items:center;
+  border:1px solid rgba(149,242,29,.28);
+  color:var(--green);
+  background:rgba(149,242,29,.07);
+  line-height:1;
+}
+.footer-dropdown[open] summary::before{content:"⌃";}
+.footer-dropdown-menu{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:8px;
+  padding:0 10px 12px;
+  margin-top:2px;
+}
+.footer-dropdown-menu a{
+  min-height:42px;
+  padding:9px 12px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  line-height:1.45;
+  color:#eaf7e5;
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.09);
+  font-weight:900;
+}
+.footer-dropdown-menu a:hover,
+.footer-package-link:hover{
+  color:var(--green);
+  border-color:rgba(149,242,29,.42);
+  background:rgba(149,242,29,.08);
+}
+.footer-package-link.research-package{
+  border-color:rgba(149,242,29,.30);
+  background:rgba(149,242,29,.075);
+}
+@media(max-width:920px){
+  .footer-link-panel{grid-template-columns:1fr;}
+  .footer-dropdown-menu{grid-template-columns:1fr;}
+}
 </style></head>
 <body>
 <a aria-label="الدعم المباشر" class="whatsapp-float" href="https://wa.me/966552191598" rel="noopener noreferrer" target="_blank" title="الدعم المباشر">
@@ -860,11 +949,18 @@ body::before,body::after,#particles,.glow-edge::after,.glass::before,
 <aside aria-label="لوحة التصفية" class="filter-panel"><div class="panel-title"><h3>لوحة التصفية</h3><div class="holo-icon small" data-icon="filter"></div></div><div class="field"><label for="searchInput">بحث داخل الأقسام</label><div class="input-wrap"><svg class="search-ico" fill="none" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path></svg><input autocomplete="off" id="searchInput" placeholder="مثال: خطة، إحصاء، ترجمة، تشات" type="search"/><button aria-label="مسح البحث" class="clear" id="clearSearch" type="button">×</button></div></div><p class="hint">اكتب بداية الكلمة أو جزءًا منها، وسيظهر البوت المطابق داخل الأقسام مباشرة.</p><div class="field"><label>ترتيب الأقسام داخل الباقة</label><div class="category-list" id="categoryList"></div></div></aside>
 </div>
 </section>
-<nav aria-label="روابط الفيديو" class="video-bar glass glow-edge" id="videos">
-<a href="https://youtu.be/tCf6sZNxcq0?si=zZWAT1DS_D6muDdL" rel="noopener noreferrer" target="_blank">▶️ الرابط الأول</a>
-<a href="https://www.youtube.com/watch?v=cB5VyUtnyzY&amp;t=200s" rel="noopener noreferrer" target="_blank">▶️ الرابط الثاني</a>
-<a href="https://www.youtube.com/watch?v=Gc9mCElTwH0&amp;t=1142s" rel="noopener noreferrer" target="_blank">▶️ الرابط الثالث بجودة عادية</a>
-<a href="https://www.skool.com/zraiee-3956/classroom/7d7bd75f?md=ed658462309c45d381f2dd74189a982e" rel="noopener noreferrer" target="_blank">▶️ الرابط الثالث بجودة عالية</a>
+<nav aria-label="الروابط السفلية للباقة" class="footer-link-panel glass glow-edge" id="videos">
+  <details class="footer-dropdown">
+    <summary>▶️ الروابط التعليمية</summary>
+    <div class="footer-dropdown-menu" role="list">
+      <a href="https://youtu.be/tCf6sZNxcq0?si=zZWAT1DS_D6muDdL" rel="noopener noreferrer" target="_blank" role="listitem">الوصول للمنصة</a>
+      <a href="https://www.youtube.com/watch?v=cB5VyUtnyzY&amp;t=200s" rel="noopener noreferrer" target="_blank" role="listitem">الفرق بين النموذج العام والبوت المخصص</a>
+      <a href="https://www.youtube.com/watch?v=Gc9mCElTwH0&amp;t=1142s" rel="noopener noreferrer" target="_blank" role="listitem">إنشاء مشروع بحثي</a>
+      <a href="https://www.skool.com/zraiee-3956/classroom/7d7bd75f?md=ed658462309c45d381f2dd74189a982e" rel="noopener noreferrer" target="_blank" role="listitem">إنشاء مشروع بحثي — جودة عالية</a>
+      <a href="https://www.youtube.com/watch?v=5rI0QumW-Q8&amp;t=77s" rel="noopener noreferrer" target="_blank" role="listitem">عمل أكثر من بوت في جلسة واحدة</a>
+    </div>
+  </details>
+  <a class="footer-package-link research-package" href="https://alzarraei-gpts.github.io/search/" rel="noopener noreferrer" target="_blank">🧩 باقة الباحث العلمي</a>
 </nav>
 <nav aria-label="الشريط السفلي للروابط" class="social-bar glass glow-edge">
 <a href="https://www.linkedin.com/in/ArabAIModels" rel="noopener noreferrer" target="_blank">📲 لينكدين</a>
